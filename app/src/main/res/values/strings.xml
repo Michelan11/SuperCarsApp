@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Super Cars</string>
+    <string name="Name">name</string>
+    <string name="Brand">brand</string>
+    <string name="Image">image</string>
+    <string name="Year">Year</string>
+    <string name="Model">Model</string>
+    <string name="text">text</string>
+    <string name="Price">price</string>
+
+</resources>
