@@ -1,5 +1,6 @@
 package com.example.cars;
 
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
@@ -13,7 +14,7 @@ import java.util.List;
 
 public class DataPersistencyHelper {
 
-    public static android.content.Context Context;
+    public static Context Context;
 
     public static void StoreData(List<Car> cars) {
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(Context);
@@ -27,14 +28,14 @@ public class DataPersistencyHelper {
     {
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(Context);
         String json = sp.getString("cars", null);
-        if (json != null) {
+        if (json != null)
+        {
             Type type = new TypeToken<List<Car>>() {
             }.getType();
-            return new Gson().fromJson(json, type);
+            return new Gson().fromJson(json,type);
         }
         else
         {
-
             List<Car> cars = new ArrayList<Car>();
             cars.add(new Car(R.drawable.porche, "Porche", "911", "Turbo S", "2017", "250,000$"));
             cars.add(new Car(R.drawable.aston, "Aston Martin", "vantage", "Sport", "2018", "400,000$"));
